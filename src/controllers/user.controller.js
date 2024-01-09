@@ -77,6 +77,8 @@ export const registerUser = asyncHandler(async (req, res) => {
     throw new ApiError(400, "Avatar file is required");
   }
 
+  // console.log(avatar);
+
   // create user object
   const user = await User.create({
     fullname,
