@@ -158,7 +158,7 @@ const deleteVideo = asyncHandler(async (req, res) => {
   if (!video) {
     return new ApiError(404, "Video not found");
   }
-
+  // TODO: Delete video from cloudinary
   const deletedVideo = await Video.findByIdAndDelete(videoId);
 
   if (!deletedVideo) {
